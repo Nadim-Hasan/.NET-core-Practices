@@ -1,7 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using static Rank.Code.Enums;
 
 namespace Rank.Model
 {
+    [Table("People")]
     public class People
     {
 
@@ -14,16 +17,21 @@ namespace Rank.Model
 
         public string PhoneNumber { get; set; }
         public string Details { get; set; }
+
+        
+
         [Required, Display(Name = "Create Date")]
         public DateTime CreateDate { get; set; }
+
         [Required, Display(Name = "Update Date")]
         public DateTime UpdateDate { get; set; }
         [Required, Display(Name ="User")]
         public string UserId { get; set; }
         [Display(Name="Picture")]
         public string PicturePath { get; set; }
-      //  [Required]
-       // public Status statusId { get; set; }
+      
+        [Required]
+        public Status statusId { get; set; }
 
         
 
